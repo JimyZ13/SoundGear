@@ -11,7 +11,7 @@ class Brand(models.Model):
     # about the company
     about_the_company = models.TextField()
     # company logo
-    logo_url = models.CharField(max_lengh=200)
+    logo_url = models.CharField(max_length=200)
 
 
 # This is the generic class for an item that can be gutiar, electric, bass or other
@@ -41,8 +41,8 @@ class Item(models.Model):
     photo1_url = models.CharField(max_length=200)
     photo2_url = models.CharField(max_length=200)
     photo3_url = models.CharField(max_length=200)
-    photo4_url = models.CharField(max_lenght=200)
-    
+    photo4_url = models.CharField(max_length=200)
+
 
 
 
