@@ -2,6 +2,18 @@ from django.db import models
 
 # Create your models here.
 
+# Generic brand class
+class Brand(models.Model):
+    # name of brand
+    name = models.CharField(max_length=100)
+    # established
+    est = models.DateField()
+    # about the company
+    about_the_company = models.TextField()
+    # company logo
+    logo_url = models.CharField(max_lengh=200)
+
+
 # This is the generic class for an item that can be gutiar, electric, bass or other
 class Item(models.Model):
     # name of the item
@@ -24,6 +36,15 @@ class Item(models.Model):
     # number of string
     num_of_strings = models.IntegerField()
     # brand
-    brand = models.CharField(max_length=100)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    # photos
+    photo1_url = models.CharField(max_length=200)
+    photo2_url = models.CharField(max_length=200)
+    photo3_url = models.CharField(max_length=200)
+    photo4_url = models.CharField(max_lenght=200)
+    
+
+
+
 
 
