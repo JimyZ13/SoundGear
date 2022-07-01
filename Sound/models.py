@@ -14,7 +14,7 @@ class Brand(models.Model):
     logo_url = models.CharField(max_length=200)
 
 
-# This is the generic class for an item that can be gutiar, electric, bass or other
+# This is the generic class for an item that can be gutiar, electric, bass or other items
 class Item(models.Model):
     # name of the item
     name = models.CharField(max_length=100)
